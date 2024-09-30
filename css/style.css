@@ -1,0 +1,520 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+:root{
+  --primary-color: #FA504D;
+  --secondary-color: #2E2F38;
+  --tertiary-color: #8E8E8E;
+  --primary-font: "Belgrano", serif;
+  --secondary-font: "Poppins", sans-serif;
+}
+
+body::before{
+  content:"";
+  width: 44%;
+  background-color: var(--secondary-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+body::after{
+  content:"Artzie.";
+  font-size: 260px;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: #FFFFFF;
+  opacity: 0.05;
+  transform: rotate(90deg);
+  width: 44%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+div.container{
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+header{
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+}
+
+.login-buttons{
+  margin-left: auto;
+}
+
+header>nav>ul{
+  display: flex;
+  list-style: none;
+  gap: 56px;
+}
+
+header>nav>ul a{
+  color: var(--secondary-color);
+
+  text-decoration: none;
+}
+
+header>aside>ul{
+  display: flex;
+  list-style: none;
+}
+
+header aside ul li a{
+  padding: 10px 40px;
+  color: white;
+  text-decoration: none;
+
+}
+
+header aside ul li:last-of-type a{
+  background-color: var(--primary-color);
+}
+
+section.hero{
+  grid-column: 1/span 1;
+  padding: 20px 60px 0 0;
+  
+}
+
+section.hero h1{
+  font-family: var(--primary-font);
+  font-size: 70px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--secondary-color);
+  /* padding-top: 20px; */
+
+  margin-bottom: 0;
+}
+
+section.hero p{
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  color: var(--tertiary-color);
+  padding-top:0;
+}
+
+div.hero-buttons{
+  display:flex;
+  gap: 5px;
+  padding-top: 16px;
+}
+
+.hero-largest{
+  background-image: url("../img/circle-vector.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+div.hero-buttons a{
+  padding: 16px 80px;
+}
+
+div.hero-buttons a:first-of-type{
+  background-color: var(--primary-color);
+  font-family: var(--secondary-font);
+  text-decoration: none;;
+  color: white;
+}
+
+div.hero-buttons a:last-of-type{
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+}
+
+section.featured{
+  grid-column: 1/span 1;
+}
+
+section.featured h2{
+  margin-top: 50px;
+  font-family: var(--primary-font);
+  font-size: 28px;
+  font-weight: 400;
+  margin:0;
+  padding: 16px 0;
+}
+
+.featured-images{
+  display: flex;
+  width: 50%;
+  gap:16px;
+}
+
+div.featured-images img{
+  margin-left:0;
+  border: 1px solid var(--tertiary-color);
+  padding: 5px;
+}
+
+article.nft-container{
+  grid-column: 2/span 1;
+  grid-row: 1/span 2;
+  padding: 50px 0 40px 0;
+}
+
+.nft-background-img img{
+  z-index: -1;
+  position: relative;
+  padding: 0 30px;
+
+}
+
+.nft-data{
+  background-color: white;
+  font-family: var(--secondary-font);
+  margin-top: -50px;
+  z-index: 20;
+}
+
+.nft-author-data{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 25px;
+}
+
+.nft-author-data img{
+  width: 63px;;
+  height: 64px;
+}
+
+.author-text h3{
+  font-size: 22px;
+  font-weight: 600;
+  margin:0;
+  color: var(--secondary-color);
+}
+
+.author-text p{
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--tertiary-color);
+}
+
+.author-text{
+  padding: 12px;
+}
+
+.nft-author-data div.author-text:last-of-type{
+  margin-left: auto;
+}
+
+.nft-data hr{
+  margin:0 30px;
+
+}
+
+.author-buttons{
+  padding: 40px 30px;
+  display: flex;
+  text-align: center;
+  font-weight: 500;
+}
+
+.author-buttons a:first-of-type{
+  background-color: var(--primary-color);
+  color: white;
+  padding: 16px;
+  width: 50%;
+  text-decoration: none;
+}
+
+.author-buttons a:last-of-type{
+  color: var(--primary-color);
+  padding: 16px;
+  width: 50%;
+  text-decoration: none;
+}
+
+.nft-data-resume-container{
+  display:flex;
+  justify-content: space-between;
+  padding: 16px 30px;
+  font-family: var(--secondary-font);
+}
+
+.nft-data-resume{
+  display:flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nft-data-resume span{
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.nft-data-resume p{
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+
+
+
